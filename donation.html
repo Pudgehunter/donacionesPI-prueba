@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestie</title>
+
+    <!--Inter font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <button class="navigation__button">
+                < </button>
+                    <h1>Donaciones</h1>
+        </nav>
+        <figure class="donation--image">
+            <image></image>
+        </figure>
+    </header>
+    <section class="donation">
+        <article class="donation__cart">
+            <h2>Elige el regalo</h2>
+            <ul class="donation__products" id="cart"></ul>
+            <div class="donation__button">
+                <button class="donation__button--minus"> - </button>
+                <p class="donation__quantity"> 0 </p>
+                <button class="donation__button--plus"> + </button>
+            </div>
+        </article>
+        <div class="donation__question">
+            <p>Si no tienes el regalo que estás buscando <a href="#">adquiere aquí más stickers</a></p>
+        </div>
+        <div class="donation__confirm">
+            <h2>Confirma tu envio</h2>
+            <div></div>
+            <button>Enviar</button>
+        </div>
+    </section>
+</body>
+
+<script src="./js/utils.js"></script>
+<script type="module" src="js/app.js"></script>
+
+</html>
