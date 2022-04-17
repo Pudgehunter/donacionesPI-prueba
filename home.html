@@ -18,6 +18,24 @@
 </head>
 
 <body>
+    <nav class="navigation"> <!--NAVIGATION IMPORTANT THAT IT IS IN ALL WEBPAGES-->
+        <a href="./home.html" class="navigation__home"> <!--HOME-->
+            <img src="./img/icon/Home.png" alt="">
+            <p>Home</p>
+        </a>
+        <a href="#" class="navigation__statistics hidden" id="entrepreneurs"> <!--Statics--> <!--Only for entrepreneurs-->
+            <img src="./img/icon/Chart-pie.png" alt="">
+            <p >Estadísticas</p> 
+        </a>
+        <a href="#" class="navigation__proyect"> <!--Proyect-->
+            <img src="./img/icon/Paste.png" alt="">
+            <p class="navigation__proyect">Proyectos</p>
+        </a>
+        <a href="#" class="navigation__profile"> <!--Profile-->
+            <img src="./img/icon/Profile.png" alt="">
+            <p>Perfil</p>
+        </a>
+    </nav>
     <figure>
         <img src="./img/logo/Bestie.png" alt="bestielogo.png">
     </figure>
@@ -28,11 +46,18 @@
             </div>
             <div class="home__today">
                 <h2>Mira lo que tenemos hoy</h2>
-                <div class="entrepreneurs__history" id="entrepreneurs__history"></div>
+                <div class="histories" id="histories"></div>
             </div>
             <div class="home__idea">
                 <h2>Algunas ideas para ti</h2>
-                <div class="client__ideas" id="client__ideas"></div>
+                <div class="filter">
+                    <button>Postres</button>
+                    <button>Almuerzos</button>
+                    <button>Pastelerías</button>
+                    <button>Dulces</button>
+                    <button>Regalos</button>
+                    <button>Papelería</button>
+                </div>
             </div>
             <div class="home__algorithm">
                 <h2>Esto se ve interesante</h2>
@@ -40,13 +65,14 @@
             </div>
             <div class="home__community">
                 <h2>Comunidad de apoyo</h2>
-                <div class="foundation__community" id="foundation__community"></div> 
+                <div class="communities" id="communities"></div> 
             </div>
         </article>
     </section>
 
     <script src="./js/utils.js"></script>
     <!--<script type="module" src="./js/entrepreneur-interesant.js"></script>-->
+    <!--<script type="module" src="./js/community.js"></script>-->
     <script type="module" src="./js/home.js"></script>
 </body>
 

@@ -44,6 +44,7 @@ registerBtn.addEventListener("submit", e => {
             email,
             password,
             isEntrepreneurs: false,
+            image: "/img/profile/default.jpg"
         });
     } else {
         alert("completa todos los campos");

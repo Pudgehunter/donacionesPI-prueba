@@ -1,31 +1,31 @@
 //Colors
 //------Primary Colors------
-$primary: #092C4C;
-$secondary: #F2994A;
-//------State Colors------------
-$info: #2FB0ED;
-$sucess: #27AE60;
-$warning: #E2B93B;
-$error: #EB5757;
+$rojo: #DD3327;
+$naranja: #FF592A;
+$rosa: #FF5387;
+$cielo: #55B4FF;
+$azul: #207AC2;
+$limon: #FFD600;
+$amarillo: #FF9B1A;
 //------Black and White Colors-------
-$black1: #000000;
-$black2: #1D1D1D;
-$black3: #282828;
-$white: #FFFFFF;
+$oscuro: #14142B;
+$oscuroIntermedio: #4E4B66;
 //------Gray Colors--------
-$gray1: #333333;
-$gray2: #4F4F4F;
-$gray3: #828282;
-$gray4: #BDBDBD;
+$gris1: #6E7191;
+$gris2: #A0A3BD;
+$gris3: #D9DBE9;
+$gris4: #EFF0F6;
+//------Background-color-------------
+$fondo: #F7F7FC;
+$blanco: #FCFCFC;
+
 
 //Typography
 //------------Fonts-size----------
-$heading1: 56px;
-$heading2: 48px;
-$heading3: 40px;
-$heading4: 32px;
-$heading5: 24px;
-$heading6: 20px;
+$heading1: 20px;
+$heading2: 18px;
+$heading3: 16px;
+$heading4: 14px;
 
 //Clean the default code
 * {
@@ -62,7 +62,46 @@ p{
 }
 
 //HOME PAGE
-//Third part 
+//HOME PAGE: FIRST PART
+.histories{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    overflow-x: scroll;
+}
+
+.history{
+    &__image{
+        margin: 10px;
+        border-radius: 40px;
+        width: 56px;
+        height: 56px;
+    }
+    &__notEntrepreneurs{
+        display:none;
+    }
+}
+
+//HOME PAGE: SECOND PART
+.filter{
+    width: 430px; //The size of celphone or app (this may change if the celphone has diferent size of display)
+    height: 100px; //The size may change if the celphone has diferent size of display
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: scroll;
+    & button{
+        padding: 10px;
+        margin: 2px 10px 2px 10px;
+        border: black;
+        background-color: $cielo;
+        width: 138px;
+        height: 38px;
+    }
+}
+
+//HOME PAGE: THIRD PART 
 .recomendations{ //Div name where the recomendation products are uploaded
     display: flex;
     flex-direction: row;
@@ -75,6 +114,17 @@ p{
         width: 138px;
         height: 191px;
     }
+}
+//HOME PAGE: FOURTH PART
+.communities{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    overflow-x: scroll;
+}
+
+.community{
+    padding: 10px;
 }
 
 button{ //Bermix ignora esto mientras, solo lo puse para que los botones no se vean feo.

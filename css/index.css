@@ -38,6 +38,54 @@ p {
           flex-direction: row;
 }
 
+.histories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 400px;
+  overflow-x: scroll;
+}
+
+.history__image {
+  margin: 10px;
+  border-radius: 40px;
+  width: 56px;
+  height: 56px;
+}
+
+.history__notEntrepreneurs {
+  display: none;
+}
+
+.filter {
+  width: 430px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+
+.filter button {
+  padding: 10px;
+  margin: 2px 10px 2px 10px;
+  border: black;
+  background-color: #55B4FF;
+  width: 138px;
+  height: 38px;
+}
+
 .recomendations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +105,22 @@ p {
 .recomendation__image {
   width: 138px;
   height: 191px;
+}
+
+.communities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 400px;
+  overflow-x: scroll;
+}
+
+.community {
+  padding: 10px;
 }
 
 button {

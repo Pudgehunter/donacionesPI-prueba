@@ -10,9 +10,14 @@ const auth = getAuth();
 
 //Global attributes of id or class
 const entrepreneurs = document.getElementById("entrepreneurs"); //The id for validates the user if is entrepreneur or not.
-const recomendationSection = document.getElementById("recomendations"); //The third part of the home page
 
+const historiesSection = document.getElementById("histories"); //The first part of the home page
+const recomendationSection = document.getElementById("recomendations"); //The third part of the home page
+const communitiesSection = document.getElementById('communities'); //The fourth part of the home page
+
+let history = []; //Array to save information of users that can have histories (Entrepreneurs)
 let recomendation = []; //Array to have many recomendation products
+let community = []; //Array to have many community products
 
 //Receives the user in the Firebase data
 const getUserInfo = async (userId) => {
@@ -43,8 +48,57 @@ const getUserInfo = async (userId) => {
     }
 });*/
 
+//HISTORIES THE FIRST PART OF THE HOME PAGE
+//Firebase history
+const getAllHistories = async () => {
+    const collectionRef = collection(db, "users");
+    const { docs } = await getDocs(collectionRef);
+
+    historiesSection.classList.add("loaded");
+
+    history = docs.map((doc) => {
+        return {
+            ...doc.data(),
+            id: doc.id,
+        }
+    });
+
+    // Recorro cada uno de los 4 productos que tengo en mi arreglo
+    history.forEach(history => {
+        // Llamo la funcion productTemplate para cada product.
+        historyTemplate(history);
+    });
+    return history;
+}
+
+const historyTemplate = (item) => {
+    //Create an "a" element, and add class of "recomendations", this is for the modal that can open like popups for histories.
+    const history = document.createElement("a");
+
+    //Popups functions
+
+    //Here is for validate if is entrepreneur or not
+    let tagHtml; //This tag is for show that is more closer or not
+    if (item.isEntrepreneurs) {
+        tagHtml = `<img src="${item.image}" alt="${item.name}" class="history__image">`;
+    } else {
+        tagHtml = `<img src="${item.image}" alt="${item.name}" class="history__notEntrepreneurs">`;
+    }0
+
+    //Add HTML
+    history.innerHTML = `<div class="history__cards">
+        ${tagHtml}
+    </div>`;
+
+    //Add each recomendation products to our app
+    historiesSection.appendChild(history);
+
+}
+
+getAllHistories();
+
 //RECOMENDATION THE THIRD PART OF THE HOME PAGE
-//Lectura de firebase recomendations
+//Firebase recomendations
 const getAllRecomendations = async () => {
     const collectionRef = collection(db, "recomendations");
     const { docs } = await getDocs(collectionRef);
@@ -76,10 +130,10 @@ const recomendationTemplate = (item) => {
     //Here we put the A code but I don't know how to do it now, so this will be ignored for some reasons.
 
     let tagHtml; //This tag is for show that is more closer or not
-    if(item.isClose){
+    if (item.isClose) {
         tagHtml = `<span class="product__tag product__tag--close">Cerca de ti</span>`;
     } else {
-        tagHtml =  `<span class="product__tag">Normal</span>`;
+        tagHtml = `<span class="product__tag">Normal</span>`;
     }
 
     //Add HTML
@@ -99,3 +153,53 @@ const recomendationTemplate = (item) => {
 }
 
 getAllRecomendations();
+
+//COMMUNITY FOR THE FOURTH PAGE
+//Firebase community
+const getAllFoundationCommunity = async () => {
+    const communityRef = collection(db, "community");
+    const { docs } = await getDocs(communityRef);
+
+    communitiesSection.classList.add("loaded");
+
+    community = docs.map((doc) => {
+        return {
+            ...doc.data(),
+            id: doc.id,
+        }
+    });
+
+    // Recorro cada uno de los 4 productos que tengo en mi arreglo
+    community.forEach(community => {
+        // Llamo la funcion productTemplate para cada product.
+        communityTemplate(community);
+    });
+    return community;
+};
+
+//Acá se hace la función para que me aparezcan el arreglo de recomendation
+const communityTemplate = (item) => {
+
+    //Create an "a" element, and add class of "recomendations", this is for the modal that can open like popups.
+    const community = document.createElement("a");
+    community.className = "community"; //The class of recomendatons for CSS (.product)
+
+    //Here we put the A code but I don't know how to do it now, so this will be ignored for some reasons.
+
+    //Add HTML
+    community.innerHTML = `
+    <div class="community__cards">
+        <figure>
+            <img src="${item.image}" alt="${item.name}" class="community__image">
+        </figure>
+        <h2 class="community__name">${item.name}</h2>
+        <p class="community__price">"Vamos: " + ${item.donations}</p>
+        <p class="community__price">"Meta: " + ${item.goal}</p>
+    </div>
+    `;
+
+    //Add each recomendation products to our app
+    communitiesSection.appendChild(community);
+}
+
+getAllFoundationCommunity();
