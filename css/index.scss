@@ -43,6 +43,15 @@ p{
 .navigation{
     display: flex;
     flex-direction: row;
+
+    &__statistics{ //To show the entrepreneur part.
+        &.hidden{
+            display: none; //If is not entrepreneur, the software shall not show statistic page
+        }
+        &.visible {
+            display: block; //If is the user is entrepreneur, the software shall show statistic page
+        }
+    }
 }
 
 .donation{
@@ -51,3 +60,26 @@ p{
         flex-direction: row;
     }
 }
+
+//HOME PAGE
+//Third part 
+.recomendations{ //Div name where the recomendation products are uploaded
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    overflow-x: scroll;
+}
+.recomendation{ //This is the class where only one product is affected. Which means that you can modify this for have uniform
+    padding: 10px;
+    &__image{
+        width: 138px;
+        height: 191px;
+    }
+}
+
+button{ //Bermix ignora esto mientras, solo lo puse para que los botones no se vean feo.
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+

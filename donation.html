@@ -19,13 +19,33 @@
 
 <body>
     <header>
+
         <nav class="navigation">
-            <button class="navigation__button">
-                < </button>
-                    <h1>Donaciones</h1>
+            <div class="navigation__home"> <!--HOME button-->
+                <img src="./img/icon/Home.png" alt="">
+                <button>Home</button>
+            </div>
+            <div class="navigation__statistics hidden" id="entrepreneurs"> <!--Statics button--> <!--Only for entrepreneurs-->
+                <img src="./img/icon/Chart-pie.png" alt="">
+                <button >Estadísticas</button> 
+            </div>
+            <div class="navigation__proyect"> <!--Proyect button-->
+                <img src="./img/icon/Paste.png" alt="">
+                <button class="navigation__proyect">Proyectos</button>
+            </div>
+            <div class="navigation__profile"> <!--Profile button-->
+                <img src="./img/icon/Profile.png" alt="">
+                <button>Perfil</button>
+            </div>
         </nav>
+
+        <section class="section">
+            <button class="section"> < </button>
+            <h1>Donaciones</h1>
+        </section>
+
         <figure class="donation--image">
-            <image></image>
+            <img src="./img/main/donation.png" alt="">
         </figure>
     </header>
     <section class="donation">
@@ -50,6 +70,6 @@
 </body>
 
 <script src="./js/utils.js"></script>
-<script type="module" src="js/app.js"></script>
+<script type="module" src="./js/donation.js"></script>
 
 </html>

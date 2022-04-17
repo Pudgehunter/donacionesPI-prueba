@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besties</title>
+
+    <!--Inter font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <figure>
+        <img src="./img/logo/Bestie.png" alt="bestielogo.png">
+    </figure>
+    <section>
+        <article class="home">
+            <div class="home__search">
+                <input type="search" placeholder="¿Qué antojo tienes hoy?" id="Buscador" />
+            </div>
+            <div class="home__today">
+                <h2>Mira lo que tenemos hoy</h2>
+                <div class="entrepreneurs__history" id="entrepreneurs__history"></div>
+            </div>
+            <div class="home__idea">
+                <h2>Algunas ideas para ti</h2>
+                <div class="client__ideas" id="client__ideas"></div>
+            </div>
+            <div class="home__algorithm">
+                <h2>Esto se ve interesante</h2>
+                <div class="recomendations" id="recomendations"></div> <!--completed-->
+            </div>
+            <div class="home__community">
+                <h2>Comunidad de apoyo</h2>
+                <div class="foundation__community" id="foundation__community"></div> 
+            </div>
+        </article>
+    </section>
+
+    <script src="./js/utils.js"></script>
+    <!--<script type="module" src="./js/entrepreneur-interesant.js"></script>-->
+    <script type="module" src="./js/home.js"></script>
+</body>
+
+</html>

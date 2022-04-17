@@ -20,6 +20,14 @@ p {
           flex-direction: row;
 }
 
+.navigation__statistics.hidden {
+  display: none;
+}
+
+.navigation__statistics.visible {
+  display: block;
+}
+
 .donation__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,5 +36,32 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.recomendations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 400px;
+  overflow-x: scroll;
+}
+
+.recomendation {
+  padding: 10px;
+}
+
+.recomendation__image {
+  width: 138px;
+  height: 191px;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background-color: white;
 }
 /*# sourceMappingURL=index.css.map */
