@@ -11,6 +11,8 @@ const auth = getAuth();
 //Global attributes of id or class
 const entrepreneurs = document.getElementById("entrepreneurs"); //The id for validates the user if is entrepreneur or not.
 
+const profile = document.querySelector(".navigation__profile"); //This validates the profile datas when she or he enters the page
+
 const historiesSection = document.getElementById("histories"); //The first part of the home page
 const recomendationSection = document.getElementById("recomendations"); //The third part of the home page
 const communitiesSection = document.getElementById('communities'); //The fourth part of the home page
@@ -31,8 +33,10 @@ const getUserInfo = async (userId) => {
 }
 
 //The software recognize if is the user is a entrepreneur, fundations or client.
-/*onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async (user) => {
     if (user) { //Receives the data of the user
+        profile.setAttribute("href", `./profile.html?id=${user.uid}`); //This is for validating the information of profile data, with this the profile page has his unique pages.
+        
         const userInfo = await getUserInfo(user.uid); //User information, this gives all data of the user conectect with e-mail or google.
 
         //The if conditions of the requirements
@@ -46,7 +50,7 @@ const getUserInfo = async (userId) => {
         //If is not entrepreneur, the software shall not show statistic page
         entrepreneurs.classList.remove("visible");
     }
-});*/
+});
 
 //HISTORIES THE FIRST PART OF THE HOME PAGE
 //Firebase history

@@ -55,32 +55,32 @@ $heading4: 14px;
     margin: 0;
 }
 
-p{
-    font-size: 25px;
+h1{ //Titles?
+    font-size: $heading1;
+}
+h2{ //Subtitles
+    font-size: $heading2
+}
+
+p{ //Everywhere?
+    font-size: $heading4;
     font-family: 'Zen Kurenaido', sans-serif;
 }
 
-//Donation screen
+//Global css
+//Navigation of all pages
 .navigation{
     display: flex;
     flex-direction: row;
-
-    &__statistics{ //To show the entrepreneur part.
-        &.hidden{
-            display: none; //If is not entrepreneur, the software shall not show statistic page
-        }
-        &.visible {
-            display: block; //If is the user is entrepreneur, the software shall show statistic page
-        }
-    }
+}
+//To show the entrepreneur part.
+.hidden{
+    display: none; //If is not entrepreneur, the software shall not show statistic page
+}
+.visible{
+    display:block; //If is the user is entrepreneur, the software shall show statistic page
 }
 
-.donation{
-    &__button{
-        display: flex;
-        flex-direction: row;
-    }
-}
 
 //HOME PAGE: CLIENT
 //HOME PAGE: CLIENT FIRST PART
@@ -190,9 +190,31 @@ p{
     padding: 10px;
 }
 
+//PROFILE
+.user{
+    &__mainImage{
+        width: 50px;
+        height: 50px;
+    }
+    &__button{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+//Donation screen
+.donation{
+    &__button{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+
 button{ //Bermix ignora esto mientras, solo lo puse para que los botones no se vean feo.
-    text-decoration: none;
     border: none;
-    background-color: white;
+    background-color: $cieloClaro;
 }
 

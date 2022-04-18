@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besties</title>
+
+    <!--Inter font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <nav class="navigation">
+        <!--NAVIGATION IMPORTANT THAT IT IS IN ALL WEBPAGES-->
+        <a href="./home.html" class="navigation__home">
+            <!--HOME-->
+            <img src="./img/icon/Home.png" alt="">
+            <p>Home</p>
+        </a>
+        <a href="#" class="navigation__statistics hidden" id="entrepreneurs">
+            <!--Statics-->
+            <!--Only for entrepreneurs-->
+            <img src="./img/icon/Chart-pie.png" alt="">
+            <p>Estadísticas</p>
+        </a>
+        <a href="#" class="navigation__proyect">
+            <!--Proyect-->
+            <img src="./img/icon/Paste.png" alt="">
+            <p class="navigation__proyect">Proyectos</p>
+        </a>
+        <a href="#" class="navigation__profile">
+            <!--Profile-->
+            <img src="./img/icon/Profile.png" alt="">
+            <p>Perfil</p>
+        </a>
+    </nav>
+    <div class="user" id="user">
+        <div class="user__image">
+            <img src="" alt="" class="user__mainImage" id="userImage">
+        </div>
+        <div class="user__info">
+            <h2 class="user__name" id="userName">Nombre de Cliente</h2>
+            <p class="user__nickname" id="userNickname">@usuarioCliente</p>
+            <p class="user__ubication" id="userUbication">Cali, Colombia</p>
+            <p class="user__description" id="userDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci elementum nisl vitae convallis blandit aliquet consectetur.</p>
+            <h3>Siguiendo</h3>
+            <p class="user__e-follow" id="userEFollow">0 emprendimientos</p>
+            <p class="user__f-follow" id="userFFollow">0 Fundaciones</p>
+        </div>
+        <div class="user__button">
+            <button class="user__edit">Editar mi perfil</button>
+            <button class="user__catalogue hidden" id="userCatalogue">Editar mi catalogo</button>
+            <button class="user__configuration">Configuraciones</button>
+        </div>
+    </div>
+    <section>
+        <div class="user__navigation">
+            <button class="user__navigation--main">Main</button>
+            <button class="user__navigation--favorite" id="userNavFavorite">Favoritos</button>
+            <button class="user__navigation--shop" id="userNavShop">Compritas</button>
+            <button class="user__navigation--feedbacks hidden" id="userNavFeedbacks">Feedbacks</button>
+            <button class="user__navigation--catalogue hidden" id="userNavCatalogue">Catálogo</button>
+        </div>
+        <div class="user__interactions"></div>
+    </section>
+
+    <script src="./js/utils.js"></script>
+    <script type="module" src="./js/profile.js"></script>
+</body>
+
+</html>

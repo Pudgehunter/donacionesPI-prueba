@@ -17,7 +17,7 @@ const logIn = async (email, password) => {
 
         alert("Gracias por Ingresar de nuevo!");
 
-        window.location = "./onboarding.html";
+        window.location = "./home.html";
         //window.location = "./home.html";
     } catch (e) {
         console.log(e);
@@ -35,14 +35,14 @@ const ingresarBtn = document.getElementById("logIn");
 
 ingresarBtn.addEventListener("submit", e => {
     e.preventDefault();
-    console.log("Funciono");
-    /*const email = ingresarBtn.email.value;
+    //console.log("Funciono");
+    const email = ingresarBtn.email.value;
     const password = ingresarBtn.password.value;
 
     if (email && password) {
         logIn(email, password);
     } else {
         alert("completa todos los campos");
-    }*/
+    }
 }
 );
