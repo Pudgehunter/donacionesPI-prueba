@@ -1,12 +1,33 @@
 //Colors
 //------Primary Colors------
+//ROJO
 $rojo: #DD3327;
+$rojoOscuro:#C02419;
+$rojoClaro:#F55A4F;
+//NARANJA
 $naranja: #FF592A;
+$naranjaOscuro:#E24316;
+$naranjaClaro:#FF825F;
+//ROSA
 $rosa: #FF5387;
+$rosaOscuro:#E13367;
+$rosaClaro:#FF89AC;
+//CIELO
 $cielo: #55B4FF;
+$cieloOscuro:#389BEC;
+$cieloClaro:#87C9FF;
+//AZUL
 $azul: #207AC2;
+$azulOscuro: #0B66AF;
+$azulClaro: #3794DF;
+//LIMON
 $limon: #FFD600;
+$limonOscuro:#DEBB04;
+$limonClaro:#FFED8C;
+//AMARILLO
 $amarillo: #FF9B1A;
+$amarilloOscuro:#DD810A;
+$amarilloClaro:#FFCA85;
 //------Black and White Colors-------
 $oscuro: #14142B;
 $oscuroIntermedio: #4E4B66;
@@ -61,8 +82,8 @@ p{
     }
 }
 
-//HOME PAGE
-//HOME PAGE: FIRST PART
+//HOME PAGE: CLIENT
+//HOME PAGE: CLIENT FIRST PART
 .histories{
     display: flex;
     flex-direction: row;
@@ -82,7 +103,7 @@ p{
     }
 }
 
-//HOME PAGE: SECOND PART
+//HOME PAGE: CLIENT SECOND PART
 .filter{
     width: 430px; //The size of celphone or app (this may change if the celphone has diferent size of display)
     height: 100px; //The size may change if the celphone has diferent size of display
@@ -101,7 +122,7 @@ p{
     }
 }
 
-//HOME PAGE: THIRD PART 
+//HOME PAGE: CLIENT THIRD PART 
 .recomendations{ //Div name where the recomendation products are uploaded
     display: flex;
     flex-direction: row;
@@ -115,7 +136,49 @@ p{
         height: 191px;
     }
 }
-//HOME PAGE: FOURTH PART
+
+//HOME PAGE: ENTREPRENEUR
+//HOME PAGE: ENTREPRENEUR SECOND PART
+.lesson{
+    background-color: $cieloClaro;
+}
+//HOME PAGE: ENTREPRENEUR THIRD PART
+.activities{
+    background-color: $gris3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    &__money{
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+    }
+}
+
+.activity{
+    display: flex;
+    flex-direction: row;
+    &__upcoming, &__chat{
+        display: flex;
+        flex-direction: column;
+    }
+}
+//HOME PAGE: ENTREPRENEUR FOURTH PART
+.metric{
+    display: flex;
+    flex-direction: row;
+}
+
+.followers, .soldout, .profiles{
+    background-color: $cieloClaro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//HOME PAGE: FINAL PART
 .communities{
     display: flex;
     flex-direction: row;
